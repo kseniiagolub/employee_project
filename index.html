@@ -20,6 +20,10 @@
     </div>
 </div>
 
+<div class="spinner-border" id="spinner" hidden role="status">
+    <span class="sr-only">Loading...</span>
+</div>
+
 <div class="container" id="new_employee" hidden>
     <h1>Employee Data</h1>
     <div class="card">
@@ -32,7 +36,7 @@
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input class="form-control" id="email" type="email" name="email" placeholder="name@co.il"
+                        <input class="form-control" id="email" type="email" name="emailAddress" placeholder="name@co.il"
                                required>
                     </div>
                 </div>
@@ -82,21 +86,21 @@
                 <div class="two_inputs">
                     <div class="form-group">
                         <label>Number of Employees</label>
-                        <input type="number" name="n_employees" required>
+                        <input type="number" name="n_employees" id="n_employees" required>
                     </div>
                     <div class="form-group">
                         <label>Number of ID digits</label>
-                        <input type="number" name="n_digits" required>
+                        <input type="number" name="n_digits" id="n_digits" required>
                     </div>
                 </div>
                 <div class="two_inputs">
                     <div class="form-group">
                         <label>Minimal Salary</label>
-                        <input type="number" name="min_salary" required>
+                        <input type="number" name="min_salary" id="min_salary" required>
                     </div>
                     <div class="form-group">
                         <label>Maximal Salary</label>
-                        <input type="number" name="max_salary" required>
+                        <input type="number" name="max_salary"  id="max_salary" required>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -124,6 +128,7 @@
 <script src="Scripts/employeeGenerator.js"></script>
 <script src="Scripts/navigator.js"></script>
 <script src="Scripts/table.js"></script>
+<script src="Scripts/spinner.js"></script>
 <script src="Scripts/main.js"></script>
 </body>
 </html>

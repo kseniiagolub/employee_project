@@ -18,13 +18,6 @@ class EmployeeGenerator {
         let title = this.random.getRandomElement(titleArray);
         let gender = this.random.getRandomElement(genderArray);
 
-        return {
-            id: id,
-            emailAddress: emailAddress,
-            gender: gender,
-            name: name,
-            salary: salary,
-            title: title
-        }
+        return {id, emailAddress, gender, name, salary, title}
     }
 }

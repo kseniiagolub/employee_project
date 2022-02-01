@@ -12,15 +12,21 @@ class Company {
     }
 
     computeBudget = function () {
-        let allEmployees = this.employees.getAll();
         let budget = 0;
-        allEmployees.forEach(function (employee) {
+        company.processEmployees(function (employee) {
             budget += employee.salary;
         })
         return budget;
     }
 
     processEmployees = function (employeeProcessor) {
-        this.employees.getAll().forEach(employeeProcessor);
+        this.employees.getAll()
+            .then(function (employees) {
+            employees.forEach(employeeProcessor);
+        })
+            .catch(function (error) {
+            alert(error.responseText);
+        })
+
     }
 }
